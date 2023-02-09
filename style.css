@@ -14,8 +14,8 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    color: #17BFAE;
-    text-shadow: 0px 1px 1px rgba(0,0,0,.5);
+    color: #fff;
+    text-shadow: 0px 1px 3px #025959;
     font-family:'Raleway', sans-serif;
     font-weight: 300;
 }
@@ -31,12 +31,15 @@ main {
 .top {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .time {
+    margin-top: 2em;
     text-align: center;
-    font-size: 4rem;
+    font-size: 2rem;
     font-family: 'Raleway', sans-serif;
+    margin: 0;
 
 }
 
@@ -68,6 +71,16 @@ div#weather-city > p {
     margin: 0;
 }
 
+.email {
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: .5em;
+    font-weight: 700;
+}
+
 .icon {
     box-shadow: 3px 4px 5px rgba(0,0,0,.7);
     border-radius: 50%;
@@ -75,10 +88,27 @@ div#weather-city > p {
     width: 45px;
     margin-right: .5em;
     margin-bottom: .5em;
-    background-color: #17BFAE;
+    background-color: #025959;
 }
 
 .temp {
     font-size: 2rem;
     font-weight: 400;
+}
+
+div#quote {
+    width: 90%;
+    text-align: center;
+    margin: 0 auto;
+    background-color: rgba(2,89,89,.7);
+    border-radius: 10px;
+}
+
+p.quote-body {
+    font-weight: 400;
+    width: 100%;
+    line-height: 1.5;
+    margin: 0;
+    font-size: 2rem;
+    
 }

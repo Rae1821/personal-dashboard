@@ -36,8 +36,31 @@ fetch('https://api.coingecko.com/api/v3/coins/dogecoin')
 
     .catch(err => console.log(err))
 
+//quote of the day
+fetch('https://api.goprogram.ai/inspiration')
+    .then(res => {
+        if(!res.ok) {
+            throw Error('Something went wrong')
+        }
+        console.log(res.status)
+        return res.json()
+    })
+    .then(data => {
+        document.getElementById('quote').innerHTML = `
+        <p class="quote-body">${data.quote}</p>
+        <p class="quote-author">${data.author}</p>
+        `
+        console.log(data)
+    })
 
-   //Set time
+
+
+
+
+
+
+
+//Set time
 function getCurrentTime() {
     const time = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit'})
     document.getElementById('time').textContent = time
